@@ -567,3 +567,11 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .price:hover .price__desc { color: var(--muted); }
 .price:hover .price__cost { color: var(--accent); }
 .price__cost { transition: color .35s ease; }
+
+/* До / После: компактный размер, не растягиваем на всю ширину */
+.ba { grid-template-columns: 1fr minmax(0, 560px); justify-content: space-between; }
+.ba__frame { width: 100%; max-width: 560px; justify-self: end; }
+@media (max-width: 1100px) {
+  .ba { grid-template-columns: 1fr; }
+  .ba__frame { justify-self: center; max-width: 520px; }
+}
